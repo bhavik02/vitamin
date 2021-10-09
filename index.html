@@ -21,6 +21,22 @@ nav a{text-decoration:none;font-size:20px;}
 border:10px solid #cd853f;
 }
 table{width:65%;}
+table{margin-left:60px;}
+
+.footer{background:brown;width:100%;height:300px;color:white;}
+.data{display:flex;justify-content:space-around;}
+.footcard{width:20%;height:auto;background:brown;border:none;margin-top:35px;
+ }
+
+ .footcard h4{font-size:24px;font-weight:bold;margin-left:20px;}
+ #footcard4 h4{margin-left:0px;}
+ .footcard ul{list-style:none; }
+ .footcard a{text-decoration:none;
+ color:white;}
+ 
+.footcard a:hover{color:#ffe4c4;}
+
+
 @media (max-width:800px){
 .contain{margin-right:30px;}
 nav{width:100%;
@@ -32,7 +48,39 @@ height:auto;}
 table{width:98%;
 font-size:12px;
 flex-wrap:wrap;}
+table{margin-left:10px;}
+
+.footer{height:400px;  background:brown;}
+.data{flex-direction:column;
+align-items:center;
+width:100%;
 }
+#card1head{display:flex;
+justify-content:center;}
+.footcard{width:100%;
+height:auto;
+line-height:1.5;
+font-size:16px;
+margin-top:-1px;
+}
+#footcard1 p{font-size:16px;}
+#footcard2 ul{display:flex; justify-content:center;}
+#footcard2 li{margin-right:4%;}
+.footcard h4 {display:flex; justify-content:center;}
+#footcard3 ul{display:grid;
+grid-template-columns:90px 90px 90px;
+justify-content:center;}
+#ctext{display:none;}
+#cicon{display:flex;
+justify-content:space-evenly;
+margin-right:2%;
+margin-left:2%;
+margin-bottom:24px;
+}
+}
+#firstrow{background:#c25922;}
+
+#firstcol{background:rgba(210,105,30,0.2);}
 
 </style>
 <body>
@@ -66,11 +114,12 @@ flex-wrap:wrap;}
 <section>
 <div class="main">
 <div class="table-responsive">
-<table class="table table-bordered" style="width:75%;" >
+<table class="table table-bordered" style="width:75%; border:0.5px solid black;" >
 <tr>
-<th colspan="5">Vitamin cheet sheet</th>
+<th colspan="5" style="font-size:18px; border:1px solid white;">Table 1: Vitamin's cheet sheet</th>
 </tr>
-<tr>
+<div class="rowsdata">
+<tr id="firstrow">
 <th>Vitamin name</th>
 <th>Benefits</th>
 <th>Deficiency effects</th>
@@ -78,7 +127,7 @@ flex-wrap:wrap;}
 <th>Food Sources</th>
 </tr>
 <tr>
-<td>Vitamin A<br>(Retinol)</td>
+<td id="firstcol">Vitamin A<br>(Retinol)</td>
 <td>Vision, immunity,<br>reproduction and growth</td>
 <td>Blindness, infections,<br>stunted growth</td>
 <td>Liver damage, birth<br>defects</td>
@@ -86,7 +135,7 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin B1<br>(Thiamin)</td>
+<td id="firstcol">Vitamin B1<br>(Thiamin)</td>
 <td>Energy metabolism ,vision,<br>cure aids and cancer</td>
 <td>Beriberi, neurological<br>problems</td>
 <td>none</td>
@@ -94,7 +143,7 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin B2<br>(Riboflavin)</td>
+<td id="firstcol">Vitamin B2<br>(Riboflavin)</td>
 <td>Energy metabolism ,immunity<br>healthy skin tissues</td>
 <td>inflammation of mouth,<br>skin</td>
 <td>none</td>
@@ -102,7 +151,7 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin B3<br>(Niacin)</td>
+<td id="firstcol">Vitamin B3<br>(Niacin)</td>
 <td>Energy metabolism, brain <br>cure diabetes, </td>
 <td>Pellegra<br>problems</td>
 <td>Impaired glucose,liver<br>damage,Niacin flush</td>
@@ -110,7 +159,7 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin B5<br>(pantothenic acid)</td>
+<td id="firstcol">Vitamin B5<br>(pantothenic acid)</td>
 <td>Stamina, protein, fat and<br>carbohydrate metabolism</td>
 <td>Extremely rare</td>
 <td>Mild intestinal distress</td>
@@ -118,7 +167,7 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin B6<br>(pyridoxine, pyridoxamine)</td>
+<td id="firstcol">Vitamin B6<br>(pyridoxine, pyridoxamine)</td>
 <td> Protein and fat metabolism,<br>improve hormones</td>
 <td>Anemia, scaly dermatitis</td>
 <td>Nerve degeneration</td>
@@ -126,7 +175,7 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin B7<br>(Biotin)</td>
+<td id="firstcol">Vitamin B7<br>(Biotin)</td>
 <td>protein and fat metabolism,<br>improve skin and nails</td>
 <td>extremely rare</td>
 <td>unlikely</td>
@@ -135,7 +184,7 @@ flex-wrap:wrap;}
 
 
 <tr>
-<td>Vitamin B9<br>(Folate, Folic acid)</td>
+<td id="firstcol">Vitamin B9<br>(Folate, Folic acid)</td>
 <td>Make new cells, promotes health<br>improve hemoglobin</td>
 <td>anemia, birth defects</td>
 <td>Masks a B12 deficiency</td>
@@ -144,22 +193,16 @@ flex-wrap:wrap;}
 
 
 <tr>
-<td>Vitamin B12<br>(Cobalamin)</td>
-<td>Protect nerve cells, activates folate,<br>forms rbc in body</td>
-<td>Anemia, nerve damage and <br>paralysis</td>
-<td>Not much</td>
-<td>Meat, fish, milk products, <br>poultry products</td>
-</tr>
-<tr>
-<td>Vitamin B12<br>(Cobalamin)</td>
+<td id="firstcol">Vitamin B12<br>(Cobalamin)</td>
 <td>Protect nerve cells, activates folate,<br>forms rbc in body</td>
 <td>Anemia, nerve damage and <br>paralysis</td>
 <td>Not much</td>
 <td>Meat, fish, milk products, <br>poultry products</td>
 </tr>
 
+
 <tr>
-<td>Vitamin C<br>(Ascorbic acid)</td>
+<td id="firstcol">Vitamin C<br>(Ascorbic acid)</td>
 <td>Antioxident, collagen synthesis, <br>immunity booster, vision</td>
 <td>Scurvy</td>
 <td>Intestinal discomfort,<br>diarrhea</td>
@@ -167,7 +210,7 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin D<br>(Chloecalciferol)</td>
+<td id="firstcol">Vitamin D<br>(Chloecalciferol)</td>
 <td>Bone growth and maintainance,<br>absorption of calcium</td>
 <td>Rickets, osteomalacia</td>
 <td>Calcium imbalance, hardning<br> of blood vessels</td>
@@ -175,7 +218,7 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin E<br>(Tocopherol)</td>
+<td id="firstcol">Vitamin E<br>(Tocopherol)</td>
 <td>Antioxident, protects cells and <br>tissues, nourish skin </td>
 <td>RBC breakage, <br>nerve damage</td>
 <td>Blood thining, weaknees, fatigue</td>
@@ -183,18 +226,194 @@ flex-wrap:wrap;}
 </tr>
 
 <tr>
-<td>Vitamin K<br>(Phylloquinone)</td>
+<td id="firstcol">Vitamin K<br>(Phylloquinone)</td>
 <td>blood clotting, bone health, <br>metabolism</td>
 <td>Hemorrhage</td>
 <td>Rare</td>
 <td>All green leafy vegetables, peas, liver, cashews <br></td>
 </tr>
 </table>
+</div>
+</div>
+<br><br>
+<div class="table-responsive">
+<table class="table table-bordered" style="width:75%; border:0.5px solid black;" >
+<tr>
+<th colspan="3" style="font-size:18px; border:1px solid white;">Table 2: Vitamin's intake value table</th>
+</tr>
+<div class="rowsdata">
+<tr id="firstrow">
+<th>Vitamin name</th>
+<th>For childrens</th>
+<th>For adults</th>
 
+</tr>
+<tr>
+<td id="firstcol">Vitamin A<br>(Retinol)</td>
+<td>600-900 microgram(mcg)</td>
+<td>2000-3000 microgram(mcg)</td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin B1<br>(Thiamin)</td>
+<td>1 milligram(mg)</td>
+<td>1.2 milligram(mg) </td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin B2<br>(Riboflavin)</td>
+<td>1 milligram(mg)</td>
+<td>1.3 milligram(mg)</td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin B3<br>(Niacin)</td>
+<td>13-14 milligram(mg) </td>
+<td>16 milligram(mg)</td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin B5<br>(pantothenic acid)</td>
+<td>3 milligram(mg)</td>
+<td>5-6 milligram(mg)</td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin B6<br>(pyridoxine, pyridoxamine)</td>
+<td> 1 milligram(mg)</td>
+<td>1.3 milligram(mg)</td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin B7<br>(Biotin)</td>
+<td>15-20 microgram(mcg)</td>
+<td>30 microgram(mcg)</td>
+
+</tr>
+
+
+<tr>
+<td id="firstcol">Vitamin B9<br>(Folate, Folic acid)</td>
+<td>200-400 microgram(mcg)</td>
+<td>400-600 microgram(mcg)</td>
+
+</tr>
+
+
+<tr>
+<td id="firstcol">Vitamin B12<br>(Cobalamin)</td>
+<td>2.4 microgram(mcg)</td>
+<td>2.4 microgram(mcg)</td>
+
+</tr>
+
+
+<tr>
+<td id="firstcol">Vitamin C<br>(Ascorbic acid)</td>
+<td>15-45 milligram(mg)</td>
+<td>75-90 milligram(mg)</td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin D<br>(Chloecalciferol)</td>
+<td>10-15 microgram(mcg)</td>
+<td>20 microgram(mcg)</td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin E<br>(Tocopherol)</td>
+<td>5-10 milligram(mg) </td>
+<td>15 milligram(mg)</td>
+
+</tr>
+
+<tr>
+<td id="firstcol">Vitamin K<br>(Phylloquinone)</td>
+<td>50-75 microgram(mg)</td>
+<td>120 microgram(mg)</td>
+
+</tr>
+</table>
+</div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="footer">
+<div class="data">
+<div class="footcard" id="footcard1">
+<div id="card1head" style="display:flex;">
+<img style="border:2px double white; border-radius:50%;" src="https://cdn-icons-png.flaticon.com/512/1052/1052788.png" width="30px" height="30px">
+<h4>VITA<span style="color:#ffa070">MINS</span></h4>
+</div>
+<p>
+“Vitamins are your best friend in life! Your body and mind get what they want from the vitamins and reach towards perfection!”
+<br>
+<span style="float:right; margin-right:4px;"><b>- Victorious Elements</b></span>
+</p>
+</div>
+<div class="footcard" id="footcard2">
+<h4>Quick links</h4>
+<ul>
+<li>
+<a  href="#">Home</a>
+</li>
+<li>
+<a  href="#">Read more</a>
+</li>
+<li>
+<a  href="#">Vitamins</a>
+</li>
+<li>
+<a  href="#">About</a>
+</li>
+</ul></div>
+<div class="footcard" id="footcard3">
+<h4>Essential Vitamins</h4>
+<ul>
+<li>
+<a  href="/vitaminA.html">Vitamin A</a>
+</li>
+<li>
+<a  href="#">Vitamin B</a>
+</li>
+<li>
+<a  href="#">Vitamin C</a>
+</li>
+<li>
+<a  href="#">Vitamin D</a>
+</li>
+<li>
+<a  href="#">Vitamin E</a>
+</li>
+<li>
+<a  href="#">Vitamin K</a>
+</li>
+</ul></div>
+<div class="footcard" id="footcard4">
+<h4>Contact</h4>
+<div id="cicon">
+<a href="#"><i  id="icon" class="fab fa-github"></i>&nbsp;&nbsp;&nbsp;<u><span id="ctext">Visit Github Profile</span></u></a>
+<br>
+<a href="#"><i id="icon" class="fab fa-instagram"></i>&nbsp;&nbsp;&nbsp;<u><span id="ctext">Visit Instagram Profile</span></u></a>
+<br><span id="ctext"><br>
+<h6>mail me at:</h6></span>
+<a href="#"><i id="icon" class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;<span id="ctext">jdweb0001@gmail.com</span></a></div>
+</div>
 </div>
 
 </div>
 </section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
